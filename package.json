@@ -11,7 +11,17 @@
     "format": "nx format:write",
     "format:check": "nx format:check",
     "prettier": "nx format:write",
-    "prettier:check": "nx format:check"
+    "prettier:check": "nx format:check",
+    "frontend:build":"nx run --target=build --project=frontend",
+    "frontend:serve":"nx run --target=serve --project=frontend",
+    "frontend:dev":"nx run --target=dev --project=frontend",
+    "frontend:lint":"nx run --target=lint --project=frontend",
+    "frontend:test":"nx run --target=test --project=frontend",
+    "backend:build":"nx run --target=build --project=backend",
+    "backend:serve":"nx run --target=serve --project=backend",
+    "backend:dev":"nx run --target=dev --project=backend",
+    "backend:lint":"nx run --target=lint --project=backend",
+    "backend:test":"nx run --target=test --project=backend"
   },
   "private": true,
   "dependencies": {
