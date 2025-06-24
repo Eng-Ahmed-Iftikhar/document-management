@@ -1,0 +1,6 @@
+{
+  "watch": ["apps/backend"],
+  "ext": "ts,json,env",
+   "exec": "cross-env NODE_ENV=development tsx apps/backend/server.ts"
+ 
+}

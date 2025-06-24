@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PRODUCTION: "true"
+    container_name: nx-backend-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - /apps/backend/.env.development
+    environment:
+      NODE_ENV: development
+      PRODUCTION: "true"
+    command: sh -c "npx nx run frontend:serve"
+
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PRODUCTION: "true"
+    container_name: nx-frontend-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - /apps/frontend/.env.local
+    environment:
+      NODE_ENV: development
+      PRODUCTION: "true"
+    command: sh -c "npx nx run frontend:serve"
+
+

@@ -1,0 +1,69 @@
+{
+  "name": "@document-management/backend",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "@nx/esbuild:esbuild",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "defaultConfiguration": "production",
+        "options": {
+          "platform": "node",
+          "outputPath": "dist/apps/backend",
+          "format": [
+            "cjs"
+          ],
+          "bundle": false,
+          "main": "apps/backend/server.ts",
+          "tsConfig": "apps/backend/tsconfig.app.json",
+          "assets": [
+            "apps/backend/src/assets"
+          ],
+          "esbuildOptions": {
+            "sourcemap": true,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        },
+        "configurations": {
+          "development": {},
+          "production": {
+            "esbuildOptions": {
+              "sourcemap": false,
+              "outExtension": {
+                ".js": ".js"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "executor": "@nx/js:node",
+        "defaultConfiguration": "production",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "buildTarget": "@document-management/backend:build",
+          "runBuildTargetDependencies": false
+        },
+        "configurations": {
+          "production": {
+            "buildTarget": "@document-management/backend:build:production"
+          }
+        }
+      },
+      "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nodemon --config apps/backend/nodemon.json"
+      }
+    }
+    }
+  }
+}

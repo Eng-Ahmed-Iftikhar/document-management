@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/frontend"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "next start dist/apps/frontend -p 3000"
+      }
+     
+    },
+    "dev":{
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "next dev apps/frontend"
+        }
+    }
+  }
+}
