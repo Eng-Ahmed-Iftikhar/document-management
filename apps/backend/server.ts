@@ -7,6 +7,8 @@ import { bearerStrategy } from './src/config/passport';
 import passport from 'passport';
 import morgan from 'morgan';
 import cors from 'cors';
+import drizzleDb from './src/db/drizzle';
+import userTable from './src/db/drizzle/schemas/user.schema';
 
 const server = express();
 server.use(morgan('tiny'));
@@ -17,7 +19,14 @@ server.use(passport.initialize());
 server.use(cors());
 server.use('/api/v1', app);
 
-server.listen(env.port, () => {
+server.listen(env.port, async () => {
+  drizzleDb
+    .select()
+    .from(userTable)
+    .then(() => {
+      logger.info('Database connected successfully');
+    })
+    .catch((err) => console.log({ err }));
   logger.info(
     'Server is running on ' + env.port + ' at ' + env.nodeEnv + ' environment'
   );

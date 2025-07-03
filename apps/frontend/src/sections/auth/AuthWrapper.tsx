@@ -7,8 +7,9 @@ import Grid from '@mui/material/Grid';
 // project import
 import AuthCard from './AuthCard';
 import AuthBackground from './AuthBackground';
-import AuthFooter from 'components/cards/AuthFooter';
+// import AuthFooter from 'components/cards/AuthFooter';
 import Logo from 'components/logo';
+import { Typography } from '@mui/material';
 
 interface Props {
   children: ReactElement;
@@ -27,7 +28,9 @@ export default function AuthWrapper({ children }: Props) {
         sx={{ minHeight: '100vh' }}
       >
         <Grid size={{ xs: 12 }} sx={{ ml: 3, mt: 3 }}>
-          <Logo />
+          <Box display="flex" alignItems="center">
+            <Logo /> <Typography variant="h4">Document management</Typography>
+          </Box>
         </Grid>
         <Grid size={{ xs: 12 }}>
           <Grid
@@ -48,9 +51,9 @@ export default function AuthWrapper({ children }: Props) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid size={{ xs: 12 }} sx={{ m: 3, mt: 1 }}>
+        {/* <Grid size={{ xs: 12 }} sx={{ m: 3, mt: 1 }}>
           <AuthFooter />
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
   );

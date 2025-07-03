@@ -17,12 +17,22 @@ export default function AuthFooter() {
       >
         <Typography variant="subtitle2" color="secondary">
           This site is protected by{' '}
-          <Typography component={Link} variant="subtitle2" href="#mantis-privacy" target="_blank" underline="hover">
+          <Typography
+            component={Link}
+            variant="subtitle2"
+            href="#mantis-privacy"
+            target="_blank"
+            underline="hover"
+          >
             Privacy Policy
           </Typography>
         </Typography>
 
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 3 }} textAlign={{ xs: 'center', sm: 'inherit' }}>
+        <Stack
+          direction={{ xs: 'column', sm: 'row' }}
+          spacing={{ xs: 1, sm: 3 }}
+          textAlign={{ xs: 'center', sm: 'inherit' }}
+        >
           <Typography
             variant="subtitle2"
             color="secondary"
