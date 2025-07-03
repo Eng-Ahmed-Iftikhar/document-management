@@ -6,11 +6,15 @@ import './globals.css';
 import ProviderWrapper from './ProviderWrapper';
 
 export const metadata: Metadata = {
-  title: 'Mantis Material UI React Dashboard Template',
-  description: 'Mantis Material UI React Dashboard Template'
+  title: 'Document managment',
+  description: 'Document managment application',
 };
 
-export default function RootLayout({ children }: { children: React.ReactElement }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactElement;
+}) {
   return (
     <html lang="en">
       <body>

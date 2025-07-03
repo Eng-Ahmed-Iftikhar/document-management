@@ -321,7 +321,7 @@ export default function FooterBlock({ isFull }: showProps) {
                       color={textColor}
                       sx={{ fontWeight: 500 }}
                     >
-                      Mantis Eco-System
+                      Document Eco-System
                     </Typography>
                     <Stack spacing={{ xs: 1.5, md: 2.5 }}>
                       {frameworks.map((item, index) => (

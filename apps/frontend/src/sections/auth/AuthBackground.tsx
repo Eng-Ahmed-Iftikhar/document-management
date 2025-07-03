@@ -28,7 +28,7 @@ export default function AuthBackground() {
     >
       <Image
         src={`${theme.palette.mode === ThemeMode.DARK ? logoDark : logo}`}
-        alt="Mantis"
+        alt="Document"
         width={100}
         height={100}
       />

@@ -20,7 +20,7 @@ export default function AuthFooter() {
           <Typography
             component={Link}
             variant="subtitle2"
-            href="#mantis-privacy"
+            href="#document-upload-privacy"
             target="_blank"
             underline="hover"
           >

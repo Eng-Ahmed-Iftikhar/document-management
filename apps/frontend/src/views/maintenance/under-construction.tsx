@@ -35,7 +35,7 @@ export default function UnderConstruction() {
             height: { xs: 265, sm: 430 },
           }}
         >
-          <Image src={construction} alt="mantis" fill sizes="100vw" />
+          <Image src={construction} alt="document" fill sizes="100vw" />
         </Box>
       </Grid>
       <Grid size={{ xs: 12 }}>

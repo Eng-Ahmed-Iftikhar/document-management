@@ -65,7 +65,7 @@ export default function ComingSoon() {
       <Grid size={{ xs: 12 }}>
         <Image
           src={coming}
-          alt="mantis"
+          alt="document"
           width={downSM ? 360 : 490}
           height={downSM ? 310 : 420}
         />

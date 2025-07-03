@@ -36,7 +36,7 @@ export default function Error500() {
         <Box sx={{ width: { xs: 350, sm: 396 } }}>
           <Image
             src={error500}
-            alt="mantis"
+            alt="document"
             layout="fixed"
             width={downSM ? 350 : 396}
             height={downSM ? 325 : 370}

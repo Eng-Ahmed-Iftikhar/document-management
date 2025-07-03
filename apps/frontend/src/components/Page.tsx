@@ -14,11 +14,14 @@ interface Props extends BoxProps {
   title: string;
 }
 
-function Page({ children, title = '', meta, ...other }: Props, ref: Ref<HTMLDivElement>) {
+function Page(
+  { children, title = '', meta, ...other }: Props,
+  ref: Ref<HTMLDivElement>
+) {
   return (
     <>
       <Head>
-        <title>{`${title} | Mantis React Admin`}</title>
+        <title>{`${title} | Document managment`}</title>
         {meta}
       </Head>
 

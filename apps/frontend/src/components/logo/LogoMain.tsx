@@ -18,7 +18,7 @@ export default function LogoMain({ reverse }: { reverse?: boolean }) {
   return (
     <Image
       src={`${theme.palette.mode === ThemeMode.DARK ? logoDark : logo}`}
-      alt="Mantis"
+      alt="Document managment"
       width={50}
       height={50}
     />

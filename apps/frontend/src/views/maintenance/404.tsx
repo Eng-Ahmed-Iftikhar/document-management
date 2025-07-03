@@ -37,7 +37,7 @@ export default function Error404() {
               height: { xs: 130, sm: 300 },
             }}
           >
-            <Image src={error404} alt="mantis" fill sizes="100vw" />
+            <Image src={error404} alt="document" fill sizes="100vw" />
           </Grid>
           <Grid sx={{ position: 'relative' }}>
             <Box
@@ -49,7 +49,7 @@ export default function Error404() {
                 height: { xs: 115, sm: 330 },
               }}
             >
-              <Image src={TwoCone} alt="mantis" fill sizes="100vw" />
+              <Image src={TwoCone} alt="document" fill sizes="100vw" />
             </Box>
           </Grid>
         </Stack>

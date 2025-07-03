@@ -14,7 +14,7 @@ export default function LogoIcon() {
   return (
     <Image
       src={`${theme.palette.mode === ThemeMode.DARK ? logoIconDark : logoIcon}`}
-      alt="Mantis"
+      alt="Document managment"
       width={50}
       height={50}
     />
